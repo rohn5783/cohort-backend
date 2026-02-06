@@ -46,6 +46,8 @@ function handleSubmit(e) {
     title: title.value,
 description: description.value
   }).then((res) => {
+    title.value = "";
+    description.value = "";
     console.log(res.data);
     fetchNotes();
   });
